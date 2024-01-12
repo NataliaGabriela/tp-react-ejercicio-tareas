@@ -1,5 +1,5 @@
-import { Button } from 'react-bootstrap';
-import Form from 'react-bootstrap/Form';
+import { Button, Form } from 'react-bootstrap';
+//import Form from 'react-bootstrap/Form';
 import ListaTareas from './ListaTareas';
 const FormularioTareas = () => {
   return (
