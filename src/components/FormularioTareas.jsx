@@ -1,7 +1,9 @@
 import { Button, Form } from "react-bootstrap";
+import {useState} from "react";
 //import Form from 'react-bootstrap/Form';
 import ListaTareas from "./ListaTareas";
 const FormularioTareas = () => {
+  const [tarea, setTarea] = useState('');
   return (
     <section>
       <Form>
@@ -14,6 +16,7 @@ const FormularioTareas = () => {
             placeholder="ej: tarea 1"
             minLength={3}
             maxLength={50}
+            onChange={(e)=> setTarea(e.target.value)}
           />
 
           <Button variant="info" className="mx-2" type="submit">
