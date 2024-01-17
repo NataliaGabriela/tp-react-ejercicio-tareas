@@ -5,9 +5,15 @@ import ListaTareas from "./ListaTareas";
 const FormularioTareas = () => {
   const [tarea, setTarea] = useState('');
   const [tareas, setTareas] = useState([]);
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    setTareas([...tareas, tarea])
+    //limpiar formulario
+    setTarea('');
+  }
   return (
     <section>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Form.Group
           className="mb-3 d-flex"
           controlId="exampleForm.ControlInput1"
