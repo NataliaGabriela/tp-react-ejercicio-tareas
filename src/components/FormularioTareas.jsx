@@ -11,6 +11,7 @@ const FormularioTareas = () => {
     //limpiar formulario
     setTarea('');
   }
+
   return (
     <section>
       <Form onSubmit={handleSubmit}>
@@ -32,7 +33,7 @@ const FormularioTareas = () => {
           </Button>
         </Form.Group>
       </Form>
-      <ListaTareas></ListaTareas>
+      <ListaTareas tareas={tareas}></ListaTareas>
     </section>
   );
 };
